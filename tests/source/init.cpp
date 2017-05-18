@@ -1,7 +1,7 @@
 #include <testclass.hpp>
 #include <catch.hpp>
 
-SCENARIO("ConstrDef") {
+SCENARIO("ConstrDefa") {
 	Complex complex;
 	REQUIRE(Complex.Real_() == 0);
 	REQUIRE(Complex.Im_() == 0);
