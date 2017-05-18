@@ -85,7 +85,7 @@ public:
 };
 ostream & operator<<(ostream & out, Complex &c)
 {
-	out << c.Real_ << " + i*(" << c.Im_ << ')' << endl;
+	out << c.getReal() << " + i*(" << c.getIm() << ')' << endl;
 	return out;
 }
 istream & operator >> (istream & in, Complex &c)
