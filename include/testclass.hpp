@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+template<class T> class Complex;
+template<class T> ostream& operator<< (ostream& out, const Complex& c);
+
 class Complex {
 	double Real_;
 	double Im_;
@@ -80,9 +83,10 @@ public:
 	void print(ostream&) {
 		cout << Real_ << " + i*(" << Im_ << ')' << endl;
 	}
-	friend ostream& operator << (ostream&, const Complex&);
-	friend istream& operator >> (istream&, Complex&);
+	friend ostream& operator << (ostream&cout, const Complex&);
+	friend istream& operator >> (istream&cin, Complex&);
 };
+template<class T> 
 ostream & operator<<(ostream & out, Complex &c)
 {
 	out << c.getReal() << " + i*(" << c.getIm() << ')' << endl;
