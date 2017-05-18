@@ -85,7 +85,7 @@ public:
 };
 ostream & operator<<(ostream & out, Complex &c)
 {
-	c.print(out);
+	out << Real_ << " + i*(" << Im_ << ')' << endl;
 	return out;
 }
 istream & operator >> (istream & in, Complex &c)
