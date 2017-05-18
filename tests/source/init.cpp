@@ -2,15 +2,15 @@
 #include <catch.hpp>
 
 SCENARIO("ConstrDefa") {
-	Complex complex;
-	REQUIRE(Complex.Real_() == 0);
-	REQUIRE(Complex.Im_() == 0);
+	Complex comp;
+	REQUIRE(сomp.Real_() == 0);
+	REQUIRE(сomp.Im_() == 0);
 }
 
 SCENARIO("constructor with params") {
-	Complex complex(1, 2);
-	REQUIRE(Complex.Real_() == 1);
-	REQUIRE(Complex.Im_() == 2);
+	Complex comp(1, 2);
+	REQUIRE(сomp.Real_() == 1);
+	REQUIRE(сomp.Im_() == 2);
 }
 
 SCENARIO("copy constructor") {
