@@ -3,21 +3,21 @@
 
 SCENARIO("ConstrDefa") {
 	Complex comp;
-	REQUIRE(сomp.Real_() == 0);
-	REQUIRE(сomp.Im_() == 0);
+	REQUIRE(сomp.getReal_() == 0);
+	REQUIRE(сomp.getIm_() == 0);
 }
 
 SCENARIO("constructor with params") {
 	Complex comp(1, 2);
-	REQUIRE(сomp.Real_() == 1);
-	REQUIRE(сomp.Im_() == 2);
+	REQUIRE(сomp.getReal_() == 1);
+	REQUIRE(сomp.getIm_() == 2);
 }
 
 SCENARIO("copy constructor") {
 	Complex comp(1, 2);
 	Complex copy(comp);
-	REQUIRE(copy.Real_() == 1);
-	REQUIRE(copy.Im_() == 2);
+	REQUIRE(copy.getReal_() == 1);
+	REQUIRE(copy.getIm_() == 2);
 }
 
 SCENARIO("operator*") {
