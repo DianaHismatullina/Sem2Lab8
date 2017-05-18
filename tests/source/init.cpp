@@ -69,7 +69,7 @@ SCENARIO("operator =") {
 }
 
 SCENARIO("operator ==") {
-	Complex c1(3, 1); 
+	Complex c1(2, 1); 
 	Complex c2(3, 1);
 	REQUIRE(c1==c2);
 }
