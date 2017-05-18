@@ -81,8 +81,8 @@ public:
 	void print(ostream&) {
 		cout << Real_ << " + i*(" << Im_ << ')' << endl;
 	}
-	friend ostream& operator << (ostream&cout, const Complex&);
-	friend istream& operator >> (istream&cin, Complex&);
+	friend ostream& operator << (ostream&cout, Complex& res);
+	friend istream& operator >> (istream&cin, Complex& res);
 };
 
 ostream & operator<<(ostream & out, Complex &c)
