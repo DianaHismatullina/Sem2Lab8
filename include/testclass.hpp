@@ -28,13 +28,21 @@ public:
 		tmp -= c2;
 		return tmp;
 	}
-	Complex& operator /= (const Complex& c2)
-	{
-		double tmp;
-		tmp = (Real_*c2.Real_ + Im_*c2.Im_) / (c2.Real_*c2.Real_ + c2.Im_*c2.Im_);
-		Im_ = (c2.Real_*Im_ - Real_*c2.Im_) / (c2.Real_*c2.Real_ + c2.Im_*c2.Im_);
-		Real_ = tmp;
-		return *this;
+	Complex& operator /= (const Complex& c2){
+		try {
+			if (c2.Im_ != 0 && c2.Real_ != 0) {
+				double tmp;
+				tmp = (Real_*c2.Real_ + Im_*c2.Im_) / (c2.Real_*c2.Real_ + c2.Im_*c2.Im_);
+				Im_ = (c2.Real_*Im_ - Real_*c2.Im_) / (c2.Real_*c2.Real_ + c2.Im_*c2.Im_);
+				Real_ = tmp;
+				return *this;
+			}
+			else throw "Can't divide by zero\n";
+		}
+		catch (char *msg) {
+			cout << "Error: " << msg << endl;
+			return *this;
+		}
 	}
 	Complex& operator *= (const Complex& c2)
 	{
